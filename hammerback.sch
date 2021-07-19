@@ -14,58 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:TestPoint_Probe TP?
-U 1 1 5EE860FE
-P 10790 10590
-AR Path="/5EE87CE5/5EE860FE" Ref="TP?"  Part="1" 
-AR Path="/5EE860FE" Ref="TP2"  Part="1" 
-F 0 "TP2" H 10943 10691 50  0000 L CNN
-F 1 "TestPoint_Probe" H 10943 10600 50  0000 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Keystone_5019_Minature" H 10990 10590 50  0001 C CNN
-F 3 "~" H 10990 10590 50  0001 C CNN
-F 4 "nofit" H 10790 10590 50  0001 C CNN "Config"
-	1    10790 10590
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5EE86104
-P 10790 10590
-AR Path="/5EE87CE5/5EE86104" Ref="#PWR?"  Part="1" 
-AR Path="/5EE86104" Ref="#PWR016"  Part="1" 
-F 0 "#PWR016" H 10790 10340 50  0001 C CNN
-F 1 "GND" H 10795 10417 50  0000 C CNN
-F 2 "" H 10790 10590 50  0001 C CNN
-F 3 "" H 10790 10590 50  0001 C CNN
-	1    10790 10590
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint_Probe TP?
-U 1 1 5F2486AC
-P 9850 10580
-AR Path="/5EE87CE5/5F2486AC" Ref="TP?"  Part="1" 
-AR Path="/5F2486AC" Ref="TP1"  Part="1" 
-F 0 "TP1" H 10003 10681 50  0000 L CNN
-F 1 "TestPoint_Probe" H 10003 10590 50  0000 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Keystone_5019_Minature" H 10050 10580 50  0001 C CNN
-F 3 "~" H 10050 10580 50  0001 C CNN
-F 4 "nofit" H 9850 10580 50  0001 C CNN "Config"
-	1    9850 10580
-	1    0    0    1   
-$EndComp
-$Comp
-L power:VDD #PWR013
-U 1 1 5F25314B
-P 9850 10580
-F 0 "#PWR013" H 9850 10430 50  0001 C CNN
-F 1 "VDD" H 9868 10753 50  0000 C CNN
-F 2 "" H 9850 10580 50  0001 C CNN
-F 3 "" H 9850 10580 50  0001 C CNN
-	1    9850 10580
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:VBUS #PWR?
 U 1 1 60F26B40
 P 3930 1630
@@ -106,10 +54,10 @@ L Connector:USB_C_Receptacle_USB2.0 J?
 U 1 1 60F26B65
 P 3180 2380
 AR Path="/5E1D22D5/60F26B65" Ref="J?"  Part="1" 
-AR Path="/60F26B65" Ref="J1"  Part="1" 
+AR Path="/60F26B65" Ref="ee"  Part="1" 
 AR Path="/5E5A3556/60F26B65" Ref="J?"  Part="1" 
 AR Path="/5EC66BF7/60F26B65" Ref="J?"  Part="1" 
-F 0 "J1" H 3287 3247 50  0000 C CNN
+F 0 "ee" H 3287 3247 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 3287 3156 50  0000 C CNN
 F 2 "KiCad/Connector_USB.pretty:USB_C_Receptacle_XKB_U262-16XN-4BVC11" H 3330 2380 50  0001 C CNN
 F 3 "https://gct.co/files/drawings/usb4105.pdf" H 3330 2380 50  0001 C CNN
@@ -605,7 +553,7 @@ Wire Wire Line
 Wire Wire Line
 	3590 5070 3590 5150
 Wire Wire Line
-	5010 5060 5010 5600
+	5010 5060 5010 5250
 Wire Wire Line
 	11160 6230 11080 6230
 Wire Wire Line
@@ -613,25 +561,6 @@ Wire Wire Line
 Connection ~ 11080 6130
 Wire Wire Line
 	11080 6130 11160 6130
-$Comp
-L Device:Thermistor TH1
-U 1 1 60F6CAEA
-P 3620 7540
-F 0 "TH1" H 3725 7586 50  0000 L CNN
-F 1 "10k" H 3725 7495 50  0000 L CNN
-F 2 "KiCad/Connector_PinHeader_2.54mm.pretty:PinHeader_1x02_P2.54mm_Vertical" H 3620 7540 50  0001 C CNN
-F 3 "~" H 3620 7540 50  0001 C CNN
-F 4 "Vishay Beyschlag/Draloric/BC Components" H 3620 7540 50  0001 C CNN "MFN"
-F 5 "NTCLE100E3103JB0" H 3620 7540 50  0001 C CNN "MPN"
-F 6 "THERMISTOR NTC 10KOHM 3977K BEAD" H 3620 7540 50  0001 C CNN "Description"
-F 7 "BC2301-ND" H 3620 7540 50  0001 C CNN "SKU"
-F 8 "dnf" H 3620 7540 50  0001 C CNN "Config"
-F 9 "Digikey" H 3620 7540 50  0001 C CNN "Vendor"
-	1    3620 7540
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3620 7340 3620 7280
 Wire Wire Line
 	3620 6700 4310 6700
 $Comp
@@ -645,8 +574,6 @@ F 3 "" H 3620 7790 50  0001 C CNN
 	1    3620 7790
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3620 7740 3620 7770
 Wire Wire Line
 	4310 7100 3890 7100
 Wire Wire Line
@@ -754,26 +681,8 @@ F 3 "" H 6690 7720 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6690 6660 6690 7720
-$Comp
-L Device:Battery BT1
-U 1 1 60F6CB3A
-P 7170 7110
-F 0 "BT1" H 7278 7156 50  0000 L CNN
-F 1 "Battery" H 7278 7065 50  0000 L CNN
-F 2 "KiCad/Connector_JST.pretty:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" V 7170 7170 50  0001 C CNN
-F 3 "~" V 7170 7170 50  0001 C CNN
-F 4 "Digikey" H 7170 7110 50  0001 C CNN "Vendor"
-F 5 "455-1749-1-ND" H 7170 7110 50  0001 C CNN "SKU"
-F 6 "CONN HEADER SMD R/A 2POS 2MM" H 7170 7110 50  0001 C CNN "Description"
-F 7 "JST" H 7170 7110 50  0001 C CNN "MFN"
-F 8 "S2B-PH-SM4-TB" H 7170 7110 50  0001 C CNN "MPN"
-	1    7170 7110
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5710 6200 6690 6200
-Wire Wire Line
-	7170 6200 7170 6420
 Wire Wire Line
 	6690 6400 6690 6200
 Connection ~ 6690 6400
@@ -791,8 +700,6 @@ F 3 "" H 7170 7720 50  0001 C CNN
 	1    7170 7720
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7170 7720 7170 7310
 Wire Wire Line
 	5710 5900 5950 5900
 Text HLabel 5780 6900 2    50   Input ~ 0
@@ -816,24 +723,6 @@ F 3 "" H 5010 7770 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5010 7400 5010 7770
-$Comp
-L Device:Fuse F1
-U 1 1 60F6CB5E
-P 7170 6570
-F 0 "F1" H 7230 6616 50  0000 L CNN
-F 1 "3 A" H 7230 6525 50  0000 L CNN
-F 2 "KiCad/Capacitor_SMD.pretty:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7220 6370 50  0001 L CNN
-F 3 "~" H 7170 6570 50  0001 C CNN
-F 4 "Polyfuse" H 7170 6570 50  0001 C CNN "MFN"
-F 5 "0466003.NR" H 7170 6570 50  0001 C CNN "MPN"
-F 6 "FUSE BOARD MNT 3A 32VAC/VDC 1206" H 7170 6570 50  0001 C CNN "Description"
-F 7 "Digikey" H 7170 6570 50  0001 C CNN "Vendor"
-F 8 "F1458TR-ND" H 7170 6570 50  0001 C CNN "SKU"
-	1    7170 6570
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7170 6720 7170 6910
 Wire Wire Line
 	4430 8930 4430 8990
 Wire Wire Line
@@ -1489,20 +1378,9 @@ F 4 "1%" H 3620 7120 50  0001 C CNN "Characteristics"
 	1    3620 7120
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3620 7280 3990 7280
-Wire Wire Line
-	3990 7280 3990 7450
 Connection ~ 3620 7280
 Wire Wire Line
 	3620 7280 3620 7220
-Wire Wire Line
-	3990 7650 3990 7770
-Wire Wire Line
-	3990 7770 3620 7770
-Connection ~ 3620 7770
-Wire Wire Line
-	3620 7770 3620 7790
 Text Notes 2380 8200 0    50   ~ 0
 Replace 1k54 with 0R and 69k8 with 10k if NTC not required.
 $Comp
@@ -1587,13 +1465,13 @@ Wire Wire Line
 $Comp
 L Device:R_Small R6
 U 1 1 60F6CC3D
-P 3990 7550
-F 0 "R6" H 4049 7596 50  0000 L CNN
-F 1 "69k8" H 4049 7505 50  0000 L CNN
-F 2 "KiCad/Resistor_SMD.pretty:R_0603_1608Metric" H 3990 7550 50  0001 C CNN
-F 3 "~" H 3990 7550 50  0001 C CNN
-F 4 "1%" H 3990 7550 50  0001 C CNN "Characteristics"
-	1    3990 7550
+P 3620 7550
+F 0 "R6" H 3679 7596 50  0000 L CNN
+F 1 "69k8" H 3679 7505 50  0000 L CNN
+F 2 "KiCad/Resistor_SMD.pretty:R_0603_1608Metric" H 3620 7550 50  0001 C CNN
+F 3 "~" H 3620 7550 50  0001 C CNN
+F 4 "1%" H 3620 7550 50  0001 C CNN "Characteristics"
+	1    3620 7550
 	1    0    0    -1  
 $EndComp
 Text Notes 1890 7620 0    50   ~ 0
@@ -1739,13 +1617,9 @@ Wire Wire Line
 	13460 3330 13460 3440
 Wire Wire Line
 	13160 3330 13160 3440
-Wire Wire Line
-	13160 3440 13220 3440
 Connection ~ 13460 3440
 Wire Wire Line
 	13460 3440 13460 3530
-Wire Wire Line
-	12410 1560 12410 1610
 Wire Wire Line
 	12410 1830 12560 1830
 Text HLabel 3930 2380 2    60   BiDi ~ 0
@@ -1760,10 +1634,6 @@ Wire Wire Line
 	3780 2380 3930 2380
 Text HLabel 12410 2330 0    60   BiDi ~ 0
 USB_N
-Wire Wire Line
-	12560 2330 12490 2330
-Wire Wire Line
-	12560 2530 12490 2530
 Text HLabel 12410 2530 0    60   BiDi ~ 0
 USB_P
 $Comp
@@ -1821,13 +1691,9 @@ Connection ~ 11710 2700
 Wire Wire Line
 	11710 2700 11710 2760
 Wire Wire Line
-	12560 2030 11860 2030
-Wire Wire Line
 	11380 2320 11380 2030
 Wire Wire Line
 	12560 2130 11710 2130
-Wire Wire Line
-	11710 2320 11710 2190
 $Comp
 L Connector:TestPoint TP?
 U 1 1 60F6CBC3
@@ -1843,146 +1709,101 @@ F 4 "nofit" H 13080 6130 50  0001 C CNN "Config"
 	1    13080 6130
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:TestPoint TP?
-U 1 1 60FD9AC0
-P 12410 1690
-AR Path="/5EC66BF7/60FD9AC0" Ref="TP?"  Part="1" 
-AR Path="/60FD9AC0" Ref="TP7"  Part="1" 
-AR Path="/5FD89A45/60FD9AC0" Ref="TP?"  Part="1" 
-F 0 "TP7" H 12350 1890 50  0000 L CNN
-F 1 "TestPoint" H 12470 1740 50  0001 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 12610 1690 50  0001 C CNN
-F 3 "~" H 12610 1690 50  0001 C CNN
-F 4 "nofit" H 12410 1690 50  0001 C CNN "Config"
-	1    12410 1690
-	0    -1   -1   0   
-$EndComp
-Connection ~ 12410 1690
 Wire Wire Line
-	12410 1690 12410 1830
+	12410 1560 12410 1830
+Wire Wire Line
+	11380 2030 12560 2030
+Wire Wire Line
+	11710 2130 11710 2320
+Wire Wire Line
+	12410 2330 12560 2330
+Wire Wire Line
+	12410 2530 12560 2530
+Wire Wire Line
+	13160 3440 13460 3440
 $Comp
-L Connector:TestPoint TP?
-U 1 1 60FDA3CB
-P 12490 2330
-AR Path="/5EC66BF7/60FDA3CB" Ref="TP?"  Part="1" 
-AR Path="/60FDA3CB" Ref="TP8"  Part="1" 
-AR Path="/5FD89A45/60FDA3CB" Ref="TP?"  Part="1" 
-F 0 "TP8" H 12430 2530 50  0000 L CNN
-F 1 "TestPoint" H 12550 2380 50  0001 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 12690 2330 50  0001 C CNN
-F 3 "~" H 12690 2330 50  0001 C CNN
-F 4 "nofit" H 12490 2330 50  0001 C CNN "Config"
-	1    12490 2330
+L Mechanical:MountingHole H1
+U 1 1 60F207B8
+P 9850 9650
+F 0 "H1" H 9950 9696 50  0000 L CNN
+F 1 "MountingHole" H 9950 9605 50  0000 L CNN
+F 2 "KiCad/MountingHole.pretty:MountingHole_3.2mm_M3_ISO14580" H 9850 9650 50  0001 C CNN
+F 3 "~" H 9850 9650 50  0001 C CNN
+	1    9850 9650
 	1    0    0    -1  
 $EndComp
-Connection ~ 12490 2330
-Wire Wire Line
-	12490 2330 12410 2330
 $Comp
-L Connector:TestPoint TP?
-U 1 1 60FDAD14
-P 11860 2030
-AR Path="/5EC66BF7/60FDAD14" Ref="TP?"  Part="1" 
-AR Path="/60FDAD14" Ref="TP6"  Part="1" 
-AR Path="/5FD89A45/60FDAD14" Ref="TP?"  Part="1" 
-F 0 "TP6" H 11800 2230 50  0000 L CNN
-F 1 "TestPoint" H 11920 2080 50  0001 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 12060 2030 50  0001 C CNN
-F 3 "~" H 12060 2030 50  0001 C CNN
-F 4 "nofit" H 11860 2030 50  0001 C CNN "Config"
-	1    11860 2030
+L Mechanical:MountingHole H2
+U 1 1 60F22F63
+P 10830 9660
+F 0 "H2" H 10930 9706 50  0000 L CNN
+F 1 "MountingHole" H 10930 9615 50  0000 L CNN
+F 2 "KiCad/MountingHole.pretty:MountingHole_3.2mm_M3_ISO14580" H 10830 9660 50  0001 C CNN
+F 3 "~" H 10830 9660 50  0001 C CNN
+	1    10830 9660
 	1    0    0    -1  
 $EndComp
-Connection ~ 11860 2030
-Wire Wire Line
-	11860 2030 11380 2030
 $Comp
-L Connector:TestPoint TP?
-U 1 1 60FDB12F
-P 11710 2190
-AR Path="/5EC66BF7/60FDB12F" Ref="TP?"  Part="1" 
-AR Path="/60FDB12F" Ref="TP5"  Part="1" 
-AR Path="/5FD89A45/60FDB12F" Ref="TP?"  Part="1" 
-F 0 "TP5" H 11650 2390 50  0000 L CNN
-F 1 "TestPoint" H 11770 2240 50  0001 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 11910 2190 50  0001 C CNN
-F 3 "~" H 11910 2190 50  0001 C CNN
-F 4 "nofit" H 11710 2190 50  0001 C CNN "Config"
-	1    11710 2190
-	0    -1   -1   0   
+L Connector_Generic:Conn_01x03 J2
+U 1 1 60F1CC9D
+P 7460 7110
+F 0 "J2" H 7540 7152 50  0000 L CNN
+F 1 "LiPo" H 7540 7061 50  0000 L CNN
+F 2 "KiCad/Connector_PinHeader_2.54mm.pretty:PinHeader_1x03_P2.54mm_Vertical" H 7460 7110 50  0001 C CNN
+F 3 "~" H 7460 7110 50  0001 C CNN
+	1    7460 7110
+	1    0    0    -1  
 $EndComp
-Connection ~ 11710 2190
 Wire Wire Line
-	11710 2190 11710 2130
-$Comp
-L Connector:TestPoint TP?
-U 1 1 60FDB74C
-P 12490 2530
-AR Path="/5EC66BF7/60FDB74C" Ref="TP?"  Part="1" 
-AR Path="/60FDB74C" Ref="TP9"  Part="1" 
-AR Path="/5FD89A45/60FDB74C" Ref="TP?"  Part="1" 
-F 0 "TP9" H 12430 2730 50  0000 L CNN
-F 1 "TestPoint" H 12550 2580 50  0001 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 12690 2530 50  0001 C CNN
-F 3 "~" H 12690 2530 50  0001 C CNN
-F 4 "nofit" H 12490 2530 50  0001 C CNN "Config"
-	1    12490 2530
-	-1   0    0    1   
-$EndComp
-Connection ~ 12490 2530
+	7260 7010 7170 7010
 Wire Wire Line
-	12490 2530 12410 2530
+	7260 7210 7170 7210
+Wire Wire Line
+	7170 7210 7170 7720
+Text HLabel 4060 7280 2    50   Input ~ 0
+NTC
+Wire Wire Line
+	3620 7280 3620 7450
+Wire Wire Line
+	3620 7650 3620 7790
+Wire Wire Line
+	3620 7280 4060 7280
+Text HLabel 7260 7110 0    50   Input ~ 0
+NTC
+Wire Wire Line
+	7170 6200 7170 7010
 $Comp
 L Connector:TestPoint TP?
-U 1 1 60FDC00D
-P 13160 3440
-AR Path="/5EC66BF7/60FDC00D" Ref="TP?"  Part="1" 
-AR Path="/60FDC00D" Ref="TP10"  Part="1" 
-AR Path="/5FD89A45/60FDC00D" Ref="TP?"  Part="1" 
-F 0 "TP10" H 13100 3640 50  0000 L CNN
-F 1 "TestPoint" H 13220 3490 50  0001 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 13360 3440 50  0001 C CNN
-F 3 "~" H 13360 3440 50  0001 C CNN
-F 4 "nofit" H 13160 3440 50  0001 C CNN "Config"
-	1    13160 3440
-	0    -1   -1   0   
-$EndComp
-Connection ~ 13160 3440
-$Comp
-L Connector:TestPoint TP?
-U 1 1 60FE534F
-P 12410 1610
-AR Path="/5EC66BF7/60FE534F" Ref="TP?"  Part="1" 
-AR Path="/60FE534F" Ref="TP?"  Part="1" 
-AR Path="/5FD89A45/60FE534F" Ref="TP?"  Part="1" 
-F 0 "TP?" H 12350 1810 50  0000 L CNN
-F 1 "TestPoint" H 12470 1660 50  0001 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 12610 1610 50  0001 C CNN
-F 3 "~" H 12610 1610 50  0001 C CNN
-F 4 "nofit" H 12410 1610 50  0001 C CNN "Config"
-	1    12410 1610
+U 1 1 60FA3B35
+P 5010 5250
+AR Path="/5EC66BF7/60FA3B35" Ref="TP?"  Part="1" 
+AR Path="/60FA3B35" Ref="TP2"  Part="1" 
+AR Path="/5FD89A45/60FA3B35" Ref="TP?"  Part="1" 
+F 0 "TP2" H 4950 5450 50  0000 L CNN
+F 1 "TestPoint" H 5070 5300 50  0001 L CNN
+F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 5210 5250 50  0001 C CNN
+F 3 "~" H 5210 5250 50  0001 C CNN
+F 4 "nofit" H 5010 5250 50  0001 C CNN "Config"
+	1    5010 5250
 	0    1    1    0   
 $EndComp
-Connection ~ 12410 1610
+Connection ~ 5010 5250
 Wire Wire Line
-	12410 1610 12410 1690
+	5010 5250 5010 5600
 $Comp
 L Connector:TestPoint TP?
-U 1 1 60FE631C
-P 13220 3440
-AR Path="/5EC66BF7/60FE631C" Ref="TP?"  Part="1" 
-AR Path="/60FE631C" Ref="TP?"  Part="1" 
-AR Path="/5FD89A45/60FE631C" Ref="TP?"  Part="1" 
-F 0 "TP?" H 13160 3640 50  0000 L CNN
-F 1 "TestPoint" H 13280 3490 50  0001 L CNN
-F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 13420 3440 50  0001 C CNN
-F 3 "~" H 13420 3440 50  0001 C CNN
-F 4 "nofit" H 13220 3440 50  0001 C CNN "Config"
-	1    13220 3440
+U 1 1 60FA45CC
+P 2880 3390
+AR Path="/5EC66BF7/60FA45CC" Ref="TP?"  Part="1" 
+AR Path="/60FA45CC" Ref="TP1"  Part="1" 
+AR Path="/5FD89A45/60FA45CC" Ref="TP?"  Part="1" 
+F 0 "TP1" H 2820 3590 50  0000 L CNN
+F 1 "TestPoint" H 2940 3440 50  0001 L CNN
+F 2 "KiCad/TestPoint.pretty:TestPoint_Pad_D1.5mm" H 3080 3390 50  0001 C CNN
+F 3 "~" H 3080 3390 50  0001 C CNN
+F 4 "nofit" H 2880 3390 50  0001 C CNN "Config"
+	1    2880 3390
 	-1   0    0    1   
 $EndComp
-Connection ~ 13220 3440
-Wire Wire Line
-	13220 3440 13460 3440
+Connection ~ 2880 3390
 $EndSCHEMATC
