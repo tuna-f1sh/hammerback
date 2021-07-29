@@ -54,10 +54,10 @@ L Connector:USB_C_Receptacle_USB2.0 J?
 U 1 1 60F26B65
 P 3180 2380
 AR Path="/5E1D22D5/60F26B65" Ref="J?"  Part="1" 
-AR Path="/60F26B65" Ref="ee"  Part="1" 
+AR Path="/60F26B65" Ref="ee1"  Part="1" 
 AR Path="/5E5A3556/60F26B65" Ref="J?"  Part="1" 
 AR Path="/5EC66BF7/60F26B65" Ref="J?"  Part="1" 
-F 0 "ee" H 3287 3247 50  0000 C CNN
+F 0 "ee1" H 3287 3247 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 3287 3156 50  0000 C CNN
 F 2 "KiCad/Connector_USB.pretty:USB_C_Receptacle_XKB_U262-16XN-4BVC11" H 3330 2380 50  0001 C CNN
 F 3 "https://gct.co/files/drawings/usb4105.pdf" H 3330 2380 50  0001 C CNN
