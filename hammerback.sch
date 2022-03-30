@@ -94,7 +94,7 @@ AR Path="/5E5A3556/60F26D66" Ref="R?"  Part="1"
 AR Path="/60F26D66" Ref="R8"  Part="1" 
 AR Path="/5EC66BF7/60F26D66" Ref="R?"  Part="1" 
 F 0 "R8" H 4699 2466 50  0000 L CNN
-F 1 "5k9" H 4699 2375 50  0000 L CNN
+F 1 "5k1" H 4699 2375 50  0000 L CNN
 F 2 "KiCad/Resistor_SMD.pretty:R_0603_1608Metric" V 4560 2420 50  0001 C CNN
 F 3 "~" H 4630 2420 50  0001 C CNN
 F 4 "1%" H 4630 2420 50  0001 C CNN "Characteristics"
@@ -109,7 +109,7 @@ AR Path="/5E5A3556/60F26D70" Ref="R?"  Part="1"
 AR Path="/60F26D70" Ref="R9"  Part="1" 
 AR Path="/5EC66BF7/60F26D70" Ref="R?"  Part="1" 
 F 0 "R9" H 5029 2466 50  0000 L CNN
-F 1 "5k9" H 5029 2375 50  0000 L CNN
+F 1 "5k1" H 5029 2375 50  0000 L CNN
 F 2 "KiCad/Resistor_SMD.pretty:R_0603_1608Metric" V 4890 2420 50  0001 C CNN
 F 3 "~" H 4960 2420 50  0001 C CNN
 F 4 "1%" H 4960 2420 50  0001 C CNN "Characteristics"
@@ -278,7 +278,7 @@ Wire Wire Line
 	11160 6530 10980 6530
 Connection ~ 9520 6430
 Wire Wire Line
-	9520 6430 9520 6130
+	9520 6430 9520 6330
 Wire Wire Line
 	9520 6130 10430 6130
 Wire Wire Line
@@ -1644,7 +1644,7 @@ AR Path="/5E5A3556/60F3328D" Ref="R?"  Part="1"
 AR Path="/60F3328D" Ref="R15"  Part="1" 
 AR Path="/5EC66BF7/60F3328D" Ref="R?"  Part="1" 
 F 0 "R15" H 11779 2516 50  0000 L CNN
-F 1 "5k9" H 11779 2425 50  0000 L CNN
+F 1 "5k1" H 11779 2425 50  0000 L CNN
 F 2 "KiCad/Resistor_SMD.pretty:R_0603_1608Metric" V 11640 2470 50  0001 C CNN
 F 3 "~" H 11710 2470 50  0001 C CNN
 F 4 "1%" H 11710 2470 50  0001 C CNN "Characteristics"
@@ -1659,7 +1659,7 @@ AR Path="/5E5A3556/60F33294" Ref="R?"  Part="1"
 AR Path="/60F33294" Ref="R14"  Part="1" 
 AR Path="/5EC66BF7/60F33294" Ref="R?"  Part="1" 
 F 0 "R14" H 11449 2516 50  0000 L CNN
-F 1 "5k9" H 11449 2425 50  0000 L CNN
+F 1 "5k1" H 11449 2425 50  0000 L CNN
 F 2 "KiCad/Resistor_SMD.pretty:R_0603_1608Metric" V 11310 2470 50  0001 C CNN
 F 3 "~" H 11380 2470 50  0001 C CNN
 F 4 "1%" H 11380 2470 50  0001 C CNN "Characteristics"
@@ -1806,4 +1806,26 @@ F 4 "nofit" H 2880 3390 50  0001 C CNN "Config"
 	-1   0    0    1   
 $EndComp
 Connection ~ 2880 3390
+Text Notes 9850 7890 0    50   ~ 0
+Boost is disabled by default here, need to add external switch or pull-up
+Text HLabel 8730 6330 0    50   Input ~ 0
+BOOST
+Wire Wire Line
+	8730 6330 8830 6330
+$Comp
+L Jumper:SolderJumper_2_Open JP2
+U 1 1 61383F10
+P 8980 6330
+F 0 "JP2" H 8980 6535 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8980 6444 50  0000 C CNN
+F 2 "KiCad/Jumper.pretty:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8980 6330 50  0001 C CNN
+F 3 "~" H 8980 6330 50  0001 C CNN
+	1    8980 6330
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9130 6330 9520 6330
+Connection ~ 9520 6330
+Wire Wire Line
+	9520 6330 9520 6130
 $EndSCHEMATC
