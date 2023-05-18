@@ -1,5 +1,8 @@
 name: Build distributable and production files
 
+permissions:
+  contents: write
+
 env:
   PROJECT_NAME: entree
   MAKE_DEFAULT: false
