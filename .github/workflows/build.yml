@@ -74,5 +74,5 @@ jobs:
         with:
           fail_on_unmatched_files: false
           files: |
-            outout/*.pdf
-            outout/**/*.zip
+            output/*.pdf
+            output/**/*.zip
